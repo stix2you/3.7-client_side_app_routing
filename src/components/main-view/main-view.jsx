@@ -31,19 +31,17 @@ export const MainView = () => {
 
     return (
         <Container>
-            
-
             <BrowserRouter>
-            <NavigationBar user={user} onLoggedOut={() => setUser(null)} />
+                <NavigationBar user={user} onLoggedOut={() => setUser(null)} />
                 <Row className="justify-content-md-center">
                     <Routes>
                         <Route path="/signup" element={<>{user ? (<Navigate to="/" />) : (<Col md={5}><SignupView /></Col>
-                        )}</>
+                        )}</>    // navigate to the signup view if the user is not logged in
                         }
                         />
 
                         <Route path="/login" element={<>{user ? (<Navigate to="/" />) : (<Col md={5}><LoginView onLoggedIn={(user) => setUser(user)} />
-                        </Col>
+                        </Col>   // navigate to the login view if the user is not logged in
                         )}</>
                         }
                         />

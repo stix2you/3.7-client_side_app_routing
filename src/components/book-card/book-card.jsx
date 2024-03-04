@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export const BookCard = ({ book, onBookClick }) => {
+export const BookCard = ({ book }) => {
   return (
     <Card className="h-100">
       <Card.Img variant="top" src={book.image} />
